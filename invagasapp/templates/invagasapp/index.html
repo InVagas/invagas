@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% if list_vagas %}
+    <ul>
+    {% for vaga in list_vagas %}
+        <li><a href="/polls/{{ vaga.id }}/">{{ vaga.titulo }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Sem vagas</p>
+{% endif %}
+</body>
+</html>
