@@ -1,3 +1,4 @@
+{% load staticfiles  %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,8 @@
     <title></title>
 </head>
 <body>
+
+<img src={% static 'img/inVagas_final.png' %}>
 {% if list_vagas %}
     <ul>
     {% for vaga in list_vagas %}

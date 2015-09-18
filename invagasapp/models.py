@@ -3,7 +3,7 @@ from django.conf import settings
 
 from django.contrib.auth.models import User
 from django.db import models
-from django.utils.datetime_safe import datetime
+from django.utils import timezone
 
 TIPO = (
     ('EP', 'Emprego'),
@@ -18,7 +18,7 @@ class Vagas(models.Model):
     estado = models.CharField(max_length=100)
     pais = models.CharField(max_length=100)
     tipo = models.CharField(max_length=100, choices=TIPO)
-    data_postagem = models.DateTimeField(default=datetime.now())
+    data_postagem = models.DateTimeField(default=timezone.now)
     postado_por = models.ForeignKey(settings.AUTH_USER_MODEL)
 
     def __unicode__(self):
