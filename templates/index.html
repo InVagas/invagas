@@ -34,7 +34,6 @@
     <img src="{% static "img/invagaslogo.png" %}">
 </div>
 <div>
-
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -52,6 +51,22 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+    <div class="container">
+
+        {% for vaga in list_vagas %}
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="#">
+                        <img class="media-object" src="/static/img/invagaslogo.png" alt="..." style="width: 100px;">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h class="media-heading">{{ vaga.titulo }}</h>
+                    <p>{{ vaga.descricao }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 </body>
 </html>
