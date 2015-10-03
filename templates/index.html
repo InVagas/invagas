@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +9,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    '
+
     <title>InVagas</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href={% static "css/bootstrap.css" %} rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="{% static 'js/ie8-responsive-file-warning.js' %}"></script><![endif]-->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src={% static "js/ie-emulation-modes-warning.js" %}></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,43 +30,71 @@
 </head>
 
 <body>
-<div class="container">
-    <img src="{% static "img/invagaslogo.png" %}">
-</div>
-<div>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="container" id="bs-example-navbar-collapse-1">
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Digite a vaga que deseja">
-                    </div>
-                </form>
-                <form class="navbar-form navbar-right" role="search">
-                    <button type="submit" class="btn btn-default">Buscar</button>
-                </form>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+<header>
     <div class="container">
-
-        {% for vaga in list_vagas %}
-            <div class="media">
-                <div class="media-left media-middle">
-                    <a href="#">
-                        <img class="media-object" src="/static/img/invagaslogo.png" alt="..." style="width: 100px;">
-                    </a>
+        <div class="col-lg-8"><img src="{% static 'img/invagaslogo.png' %}" alt=""/></div>
+        <div class="col-lg-4">
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control">
                 </div>
-                <div class="media-body">
-                    <h class="media-heading">{{ vaga.titulo }}</h>
-                    <p>{{ vaga.descricao }}</p>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control">
                 </div>
-            </div>
-        {% endfor %}
+                <button type="submit" class="btn btn-success">Sign in</button>
+            </form>
+        </div>
     </div>
+</header>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">Sign in</button>
+            </form>
+        </div>
+        <!--/.navbar-collapse -->
+    </div>
+</nav>
+<div class="container">
+    {% for vaga in list_vagas %}
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="/static/img/invagaslogo.png" alt="..." style="width: 100px;">
+                </a>
+            </div>
+            <div class="media-body">
+                <h class="media-heading">{{ vaga.titulo }}</h>
+                <p>{{ vaga.descricao }}</p>
+            </div>
+        </div>
+    {% endfor %}
 </div>
+<!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src={% static "js/bootstrap.js" %}></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src={% static "js/ie10-viewport-bug-workaround.js" %}></script>
 </body>
 </html>
