@@ -1,7 +1,8 @@
 from django.contrib import admin
-from invagasapp.models import Vagas
+from invagasapp.models import Vagas, Empresa
 
 
+@admin.register(Vagas)
 class VagasAdmin(admin.ModelAdmin):
 
 
@@ -11,4 +12,5 @@ class VagasAdmin(admin.ModelAdmin):
 
     search_fields = ('data_postagem', 'titulo')
 
-admin.site.register(Vagas, VagasAdmin)
+
+admin.site.register(Empresa)
