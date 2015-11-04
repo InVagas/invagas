@@ -35,11 +35,11 @@
             <div class="col-md-5">
                 <img class="quadro" src="{% static 'img/quadro.png' %}">
 
-                <form class="form-signin">
+                <form class="form-signin" action="{% url 'admin:login' %}?next=/admin/" method="post">{% csrf_token %}
                     <label for="inputEmail" class="sr-only">Email</label>
-                    <input type="email id=" inputEmail" class="form-control" placeholder="Email" required autofocus>
+                    <input type="text" id="inputEmail" class="form-control" placeholder="Usuário" name="username" required autofocus>
                     <label for="inputPassword" class="sr-only">Senha</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Senha"  name="password" required
                            style="width: 226px">
                     <button class="btn btn-lg btn-primary btn-block" type="submit" style=" position: absolute; height: 46px; width: 54px; padding-right: 11px; border-right-width: 0px;
                     margin-left: 227px; top: 103px;">Ir
