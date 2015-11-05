@@ -3056,9 +3056,9 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
+  color: #FFFFFF;
+  background-color: #41B733;
+  border-color: #41B733;
 }
 .btn-default:focus,
 .btn-default.focus {
@@ -3123,8 +3123,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #fff;
-  background-color: #65B140;
-  border-color: #65B140;
+  background-color: #1C486B;
+  border-color: #1C486B;
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -3134,8 +3134,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #41B733;
+  border-color: #41B733;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -4545,22 +4545,25 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #FFFFFF;
+  font-family: arial black;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+  color: #67C93C;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
   color: #777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color: #FFFFFF;
+  font-family: arial black;
+  font-size: 17px;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333;
+  color: #67C93C;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,

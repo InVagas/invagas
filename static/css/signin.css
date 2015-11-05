@@ -56,14 +56,19 @@ body {
 
 .btn-primary {
     color: #fff;
-    background-color: #41B733;
-    border-color: #41B733
+    background-color: #1E496A;
+    border-color: #1E496A;
 }
 
 .navbar-default {
     background-color: #1E496A;
     border-color: #1E496A;
 }
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #41B733;
+  border-color: #41B733;
 
 .container-fluid {
     padding-right: 15px;
