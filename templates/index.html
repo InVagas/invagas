@@ -50,6 +50,9 @@
                         <label>
                             <input type="checkbox" value="remember-me"> Esqueceu a senha?
                         </label>
+                        <label>
+                            <a href="admin">Cadastre-se</a>
+                        </label>
                     </div>
                 </form>
             </div>
@@ -72,23 +75,30 @@
 ">Início</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <link rel='stylesheet' href='static/css/signin.css'/>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Local <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li><a href="#">BA</a></li>
+                        <li><a href="#">BH</a></li>
+                        <li><a href="#">CE</a></li>
+                        <li><a href="#">DF</a></li>
+                        <li><a href="#">RJ</a></li>
+                        <li><a href="#">RN</a></li>
+                        <li><a href="#">SP</a></li>
                     </ul>
                 </li>
             </ul>
+            <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+            <script src='static/css/signin.css'></script>
+            <script>
+                $(function () {
+                    $('.dropdown-toggle').dropdown();
+                });
+            </script>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Digite a vaga que deseja">
@@ -100,11 +110,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false" style="margin-right: 80px;">Tipo <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Emprego</a></li>
+                        <li><a href="#">Estágio</a></li>
                     </ul>
                 </li>
             </ul>
@@ -123,7 +130,7 @@
                 <div class="media">
                     <div class="media-left media-middle">
                         <a href="#">
-                            <img class="media-object" src="/static/img/invagaslogo.png" alt="..." style="width: 100px;">
+                            <img class="media-object" src="/static/img/app_logo.png" alt="..." style="width: 70px;">
                         </a>
                     </div>
                     <div class="media-body">
@@ -162,7 +169,7 @@
 
 <footer class="blog-footer">
     <p>Desenvolvido por: <a href="http://getbootstrap.com">Fa7 Revolution</a> Por <a
-            href="https://twitter.com/mdo">@jalesholanda</a>.</p>
+            href="https://www.github.com/invagas">@inVagasTeam</a>.</p>
 
     <p>
         <a href="#">Voltar ao topo da pagina</a>
