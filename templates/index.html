@@ -37,9 +37,11 @@
 
                 <form class="form-signin" action="{% url 'admin:login' %}?next=/admin/" method="post">{% csrf_token %}
                     <label for="inputEmail" class="sr-only">Email</label>
-                    <input type="text" id="inputEmail" class="form-control" placeholder="Usuário" name="username" required autofocus>
+                    <input type="text" id="inputEmail" class="form-control" placeholder="Usuário" name="username"
+                           required autofocus>
                     <label for="inputPassword" class="sr-only">Senha</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Senha"  name="password" required
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Senha" name="password"
+                           required
                            style="width: 226px">
                     <button class="btn btn-lg btn-primary btn-block" type="submit" style=" position: absolute; height: 43px; width: 52px; padding-right: 11px; border-right-width: 0px;
                     margin-left: 227px; top: 103px;">Ir
@@ -155,6 +157,18 @@
     </div>
 
 </div>
+
+<hr class="featurette-divider" color="black">
+
+<footer class="blog-footer">
+    <p>Desenvolvido por: <a href="http://getbootstrap.com">Fa7 Revolution</a> Por <a
+            href="https://twitter.com/mdo">@jalesholanda</a>.</p>
+
+    <p>
+        <a href="#">Voltar ao topo da pagina</a>
+    </p>
+</footer>
+
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
